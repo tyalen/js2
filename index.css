@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f7fb;
+}
+
+*,*::before, &::after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.w-fit {
+    width: fit-content(100%);
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: background-color 125ms ease-in-out, border-color 125ms ease-in-out;
+    outline: none;
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: #333333;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.password-options {
+    margin-bottom: 20px;
+}
+
+.password-options label {
+    margin-right: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.password-list {
+    margin-top: 30px;
+}
+
+.password-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fafafa;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.password-item strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.password-item button {
+    width: fit-content;
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.password-item button:hover {
+    background-color: #e53935;
+}
+
+.checkbox {
+    display: flex;
+    gap: 4px;
+    align-content: center;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    width: fit-content;
+}
+
+@media screen and (max-width: 460px){
+    .container {
+        margin: 0 20px;
+        /*padding-left: 20px;*/
+        /*padding-right: 20px;*/
+    }
+}

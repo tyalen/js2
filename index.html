@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="icon.png" type="image/png">
+    <title>Password Manager</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Password Manager</h1>
+    <form id="password-form">
+        <input type="text" id="site" placeholder="Site URL" required />
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="text" id="password" placeholder="Password" required />
+        <div class="password-options">
+            <label class="checkbox">
+                <input type="checkbox" id="include-special" checked>
+                Include special characters
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" id="include-numbers" checked>
+                Include numbers
+            </label>
+            <label for="password-length">Password length:</label>
+            <select id="password-length">
+                <option value="8">8</option>
+                <option value="12" selected>12</option>
+                <option value="16">16</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <button type="button" id="generate-password">Generate Password</button>
+        <button type="submit">Save</button>
+    </form>
+
+    <div class="password-list" id="password-list"></div>
+</div>
+
+<script src="service-worker.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
